@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang= "en">
+<head>
+    <title>Battleship</title>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Play Battleship!</h1>
+        <script src= "Battleship.js"></script>
+    </body>
+</html>
+
+
+ var location1 = 3;
+    var location2 = 1;
+    var location3 = 2;
+    var userGuess; 
+    var hits = 0;
+    var guesses = 0;
+    var isSunk = false;
+    
+    while (isSunk == false){
+        userGuess = prompt("Get ready to fire, but first enter a number between 0-6");
+        if (userGuess < 0 || > 6){
+        alert("Please enter a valid number");
+        } else {
+        guesses = guesses +1;
+            
+        if (userGuess == location1 || userGuess == location2 || userGuess == location3){
+            alert("That was a hit!")
+            hits = hits + 1 ;
+            if (hits == 3) {
+                 is sunk = true;
+                 alert("Your battleship has been sunk");
+            }
+            
+            }else{
+                alert("That was a Miss!");
+            }
+          }
+        }
+    var stat = "You took " + guesses + "to sink the battleship"
+    alert(stat);
+    
+    
